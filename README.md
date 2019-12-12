@@ -1,11 +1,11 @@
-## Gettext-Nedir? .mo-.po-UzantiliDosyalarNedir?
+# Gettext-Transtag_.mo_.po
 
 Yazılım dillerine çoklu dil desteği sağlamak için çevirilerinin yapılması gerekir. Yazılımın hangi dilde çalışacağına kullanıcı karar verir ve dil seçimini yapar. Yazılımda belli bazı işlemler ve dosyalarla arayüzde istenilen dil ile kullanıcının rahat bir şekilde işlem yapması sağlanır.
 
 Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde çalışması için istenilen dil çevirisinin bulunması ve bunun çalıştırılması gerekmektedir. Burada kullanılacak olan farklı dillerde yazılmış olan mesajlar veya dökümantasyonlar .mo uzantılı dosyanın içinde bulunurlar. Bu dosyalar bir editör yardımıyla düzenlenebilen .po uzantılı dosyalardan oluşurlar. Kısaca .mo uzantılı dosyalar .po uzantılı dosyaların derlenmiş halidir. 
 
 
-### Gettext nasıl kullanılır?
+## transtag nasıl kullanılır?
 
 #### Eğer çevirilecek cümle kısa ise =>
 ```
@@ -19,19 +19,22 @@ Ağaç kabuklarının ve yosunların dokusundan ilham alınarak tasarlanan triko
 sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı. 
 {%- endtrans %}
 ```
-#### Diğer farklı türde kullanımlar;
+#### .format referans vererek kullanım;
 
-  ```
-	<h1>{% trans "Let's translate this" %}</h1>
-  ```
-#### fonksiyon belitme
+````
+{{ _('{}Ön Bilgilendirme Koşulları`nı{} ve {}Uzaktan Satış
+Sözleşmesi`ni{} okudum ve kabul ediyorum.'.format('<a href="/orders/contract/?contract_name=info"
+class="js-ajax-popup">','</a>',
+'<a href="/orders/contract/?contract_name=sales" class="js-ajax-popup">','</a>'))}}
+````
 
-```
- {% trans link=url('account-contact') -%}
+````
+{% trans link=url('account-contact') -%}
   Görüş, öneri ya da şikayetinizi paylaşmak isterseniz, <a href="{{ link }}">İletişim Formu</a>’nu 
   doldurarak bize ulaştırabilirsiniz.
  {%- endtrans %}
-```
+````
+
 
 
 ### setting.py için örnek kod ayarlamaları
