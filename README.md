@@ -1,0 +1,1 @@
+# Gettext-Nedir-.mo-.po-uzant-l-dosyalar-nedir-
