@@ -10,9 +10,12 @@ Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde ç
 #### Eğer çevirilecek cümle kısa ise => 
 ```
 {{ _(‘Daha fazlası için tıkla') }}
-````
-#### Eğer çevirilecek cümle kısa ise => 
-````
- {% trans -%}
-    Ağaç kabuklarının ve yosunların dokusundan ilham alınarak tasarlanan trikolar, sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı.
-    {%- endtrans %}
+```
+#### Eğer çevirilecek cümle kısa ise =>
+
+```
+{% trans -%}
+Ağaç kabuklarının ve yosunların dokusundan ilham alınarak tasarlanan trikolar,
+ sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı. 
+{%- endtrans %}
+```
