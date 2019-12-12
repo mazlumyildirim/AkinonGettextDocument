@@ -5,9 +5,9 @@ Yazılım dillerine çoklu dil desteği sağlamak için çevirilerinin yapılmas
 Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde çalışması için istenilen dil çevirisinin bulunması ve bunun çalıştırılması gerekmektedir. Burada kullanılacak olan farklı dillerde yazılmış olan mesajlar veya dökümantasyonlar .mo uzantılı dosyanın içinde bulunurlar. Bu dosyalar bir editör yardımıyla düzenlenebilen .po uzantılı dosyalardan oluşurlar. Kısaca .mo uzantılı dosyalar .po uzantılı dosyaların derlenmiş halidir. 
 
 
-### Gettext, jinja ile nasıl kullanılır?
+### Gettext nasıl kullanılır?
 
-#### Eğer çevirilecek cümle kısa ise => 
+#### Eğer çevirilecek cümle kısa ise =>
 ```
 {{ _(‘Daha fazlası için tıkla') }}
 ```
@@ -16,6 +16,18 @@ Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde ç
 ```
 {% trans -%}
 Ağaç kabuklarının ve yosunların dokusundan ilham alınarak tasarlanan trikolar,
- sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı. 
+sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı. 
 {%- endtrans %}
+```
+#### Diğer farklı türde kullanımlar;
+
+  ```
+	<h1>{% trans "Let's translate this" %}</h1>
+  ```
+
+```
+ {% trans link=url('account-contact') -%}
+  Görüş, öneri ya da şikayetinizi paylaşmak isterseniz, <a href="{{ link }}">İletişim Formu</a>’nu 
+  doldurarak bize ulaştırabilirsiniz.
+ {%- endtrans %}
 ```
