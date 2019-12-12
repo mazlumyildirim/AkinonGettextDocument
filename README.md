@@ -49,3 +49,7 @@ LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarını
     ('es-es', u'İspanyolca'),
 ]
 ````
+
+##  gettext js dosyasına dahil etme
+
+import gettext from 'dosya-konumu/gettext';
