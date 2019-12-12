@@ -24,6 +24,7 @@ sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kara
   ```
 	<h1>{% trans "Let's translate this" %}</h1>
   ```
+#### fonksiyon belitme
 
 ```
  {% trans link=url('account-contact') -%}
@@ -31,3 +32,17 @@ sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kara
   doldurarak bize ulaştırabilirsiniz.
  {%- endtrans %}
 ```
+
+
+### setting.py için örnek kod ayarlamaları
+````
+LANGUAGE_CODE = 'tr-tr' 	* Asıl yazılan, varsayılan dil
+
+LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarının bulunduğu, dil seçeneği.  
+    ('tr-tr', u'Türkçe'),      
+    ('us-en', u'İngilizce'),
+    ('fr-fr', u'Fransızca'),
+    ('ru-ru', u'Rusça'),
+    ('es-es', u'İspanyolca'),
+]
+````
