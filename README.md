@@ -9,7 +9,7 @@ Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde ç
 
 ####   => Eğer çevirilecek cümle kısa ise =>
 ```
-{{ _(‘Daha fazlası için tıkla') }}
+{{ _('Daha fazlası için tıkla') }}
 ```
 ####   => Eğer uzun paragraf çevirilecek ise =>
 
