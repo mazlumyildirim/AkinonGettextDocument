@@ -71,3 +71,52 @@ LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarını
 ]
 ````
 
+## Genel olarak yukarıda verilen bilgiler ile HTML veya js'te yapılacak uygulamalardan sonra;
+
+#### Terminalde sırasıyla (Örnek çeviri İngilizce - Türkçe) ;
+
+  ### HTML .po dosyasını çıkarmak için;
+   #### A-1 => 
+
+       ````
+       sudo python manage.py makemessages —locale=en_US
+       sudo python manage.py makemessages --locale=tr_TR
+       ````
+       Komut uygulaması ile .po dosyası oluşturuluyor.
+
+   #### A-2 =>
+      .po dosyası oluşturulduktan sonra,
+      ````
+      sudo python manage.py compilemessages --locale=en_US
+      sudo python manage.py compilemessages --locale=tr_TR
+      ````
+      Komut uygulaması ile compile messagess oluşturuluyor.
+
+
+ ### JS .po dosyasını çıkarmak için;
+ 
+   #### B-1 İngilizce dili için çıkarılacak .po için => 
+        
+       ````
+        python manage.py jsmakemessages --locale=en_US -d djangojs --ignore=node_modules
+        --ignore=bundle.js --settings=shomnipro.settings --localedir=/file/patch/project/locale
+       ````
+       Komut uygulaması ile .po dosyası oluşturuluyor.
+   
+   #### B-2 Türkçe dili için çıkarılacak .po için => 
+        
+       ````
+        python manage.py jsmakemessages --locale=tr_TR -d djangojs --ignore=node_modules
+        --ignore=bundle.js --settings=shomnipro.settings --localedir=/file/patch/project/locale
+       ````
+       Komut uygulaması ile .po dosyası oluşturuluyor.
+   
+   #### B-3 compilemessages için =>
+   
+       ````
+       python manage.py jscompilemessages --locale=en_US
+       python manage.py jscompilemessages --locale=tr_TR
+       ````
+
+   
+      
