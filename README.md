@@ -35,7 +35,11 @@ class="js-ajax-popup">','</a>',
  {%- endtrans %}
 ````
 
-
+##  gettext js dosyasına dahil etme
+örnek olarak;
+````
+import gettext from 'dosya-konumu/gettext';
+````
 
 ### setting.py için örnek kod ayarlamaları
 ````
@@ -50,6 +54,3 @@ LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarını
 ]
 ````
 
-##  gettext js dosyasına dahil etme
-
-import gettext from 'dosya-konumu/gettext';
