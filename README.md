@@ -75,7 +75,7 @@ LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarını
 
 #### Terminalde sırasıyla (Örnek çeviri İngilizce - Türkçe) ;
 
-  ### HTML .po dosyasını çıkarmak için;
+  ### A - HTML .po dosyasını çıkarmak için;
    #### A-1 => 
 
        ````
@@ -93,7 +93,7 @@ LANGUAGES = [  			* UI'da kullanıcını seçeceği ve gerekli .po dosyalarını
       Komut uygulaması ile compile messagess oluşturuluyor.
 
 
- ### JS .po dosyasını çıkarmak için;
+ ### B - JS .po dosyasını çıkarmak için;
  
    #### B-1 İngilizce dili için çıkarılacak .po için => 
         
