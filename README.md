@@ -25,16 +25,14 @@ Eski dostu tam balıkçı yakalar ile tekrar buluşan trikolara, şehirli erkeğ
 
 ````
 {{ _('{}Ön Bilgilendirme Koşulları`nı{} ve {}Uzaktan Satış
-Sözleşmesi`ni{} okudum ve kabul ediyorum.'.format('<a href="/orders/contract/?contract_name=info"
-class="js-ajax-popup">','</a>',
-'<a href="/orders/contract/?contract_name=sales" class="js-ajax-popup">','</a>'))}}
+Sözleşmesi`ni{} okudum ve kabul ediyorum.'.format('link 1','link 2'))}}
 ````
 
 ````
-{% trans link=url('account-contact') -%}
-  Görüş, öneri ya da şikayetinizi paylaşmak isterseniz, <a href="{{ link }}">İletişim Formu</a>’nu 
-  doldurarak bize ulaştırabilirsiniz.
- {%- endtrans %}
+{% autoescape on %}
+{{ _('{}Ön Bilgilendirme Koşulları`nı{} ve {}Uzaktan Satış
+Sözleşmesi`ni{} okudum ve kabul ediyorum.'.format('link 1','link 2'))}}
+{% endautoescape  %}
 ````
 ####   => if loop kullanımı
 
