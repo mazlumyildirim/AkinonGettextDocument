@@ -36,6 +36,13 @@ class="js-ajax-popup">','</a>',
   doldurarak bize ulaştırabilirsiniz.
  {%- endtrans %}
 ````
+#### if loop kullanımı
+
+```
+ {{ _('adlı {} stokta kalmadığı için sepetinizden çıkarıldı!').format(
+      _('ürünler') if products|length > 1 else _('ürün')
+ ) }}
+```
 
 ##  gettext js dosyasına dahil etme
 örnek olarak;
