@@ -7,11 +7,11 @@ Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde ç
 
 ## transtag HTML'de nasıl kullanılır?
 
-#### Eğer çevirilecek cümle kısa ise =>
+####   => Eğer çevirilecek cümle kısa ise =>
 ```
 {{ _(‘Daha fazlası için tıkla') }}
 ```
-#### Eğer uzun paragraf çevirilecek ise =>
+####   => Eğer uzun paragraf çevirilecek ise =>
 
 ```
 {% trans -%}
@@ -21,7 +21,7 @@ Koleksiyonun odak noktasında yer alan Pierre Cardin trikolar, yeni sezonda daha
 Eski dostu tam balıkçı yakalar ile tekrar buluşan trikolara, şehirli erkeğin kayıtsız kalması ise imkansız!
 {%- endtrans %}
 ```
-#### .format referans vererek kullanım;
+####   => .format referans vererek kullanım;
 
 ````
 {{ _('{}Ön Bilgilendirme Koşulları`nı{} ve {}Uzaktan Satış
@@ -36,7 +36,7 @@ class="js-ajax-popup">','</a>',
   doldurarak bize ulaştırabilirsiniz.
  {%- endtrans %}
 ````
-#### if loop kullanımı
+####   => if loop kullanımı
 
 ```
  {{ _('adlı {} stokta kalmadığı için sepetinizden çıkarıldı!').format(
