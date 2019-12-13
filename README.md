@@ -5,18 +5,20 @@ Yazılım dillerine çoklu dil desteği sağlamak için çevirilerinin yapılmas
 Yazılım İngilizce olarak hazırlandığını varsayarsak, başka bir dilde çalışması için istenilen dil çevirisinin bulunması ve bunun çalıştırılması gerekmektedir. Burada kullanılacak olan farklı dillerde yazılmış olan mesajlar veya dökümantasyonlar .mo uzantılı dosyanın içinde bulunurlar. Bu dosyalar bir editör yardımıyla düzenlenebilen .po uzantılı dosyalardan oluşurlar. Kısaca .mo uzantılı dosyalar .po uzantılı dosyaların derlenmiş halidir. 
 
 
-## transtag nasıl kullanılır?
+## transtag HTML'de nasıl kullanılır?
 
 #### Eğer çevirilecek cümle kısa ise =>
 ```
 {{ _(‘Daha fazlası için tıkla') }}
 ```
-#### Eğer çevirilecek cümle kısa ise =>
+#### Eğer uzun paragraf çevirilecek ise =>
 
 ```
 {% trans -%}
-Ağaç kabuklarının ve yosunların dokusundan ilham alınarak tasarlanan trikolar,
-sezonun kurtarıcı parçaları olarak gardırobunuzda kendine yer edinmeye kararlı. 
+Koleksiyonun odak noktasında yer alan Pierre Cardin trikolar, yeni sezonda daha koyu ve daha derin.
+Eski dostu tam balıkçı yakalar ile tekrar buluşan trikolara, şehirli erkeğin kayıtsız kalması ise imkansız!
+Koleksiyonun odak noktasında yer alan Pierre Cardin trikolar, yeni sezonda daha koyu ve daha derin.
+Eski dostu tam balıkçı yakalar ile tekrar buluşan trikolara, şehirli erkeğin kayıtsız kalması ise imkansız!
 {%- endtrans %}
 ```
 #### .format referans vererek kullanım;
@@ -39,6 +41,14 @@ class="js-ajax-popup">','</a>',
 örnek olarak;
 ````
 import gettext from 'dosya-konumu/gettext';
+
+ results.forEach(function (el) {
+    template += `<li>
+      <a href="${el.id}">
+        <span>${gettext('Sipariş')} : <b>${el.number}</b></span> 
+        <span>${el.amount} ${el.currency.label </span>
+      </a></li>`;
+});
 ````
 
 ### setting.py için örnek kod ayarlamaları
